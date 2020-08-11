@@ -1,8 +1,10 @@
 # Ng File Picker  
+
 This is a configurable file picker build for Angular applications.  
 Supports (Angular 2+) versions.
 
 ## Installation:  
+
 1. Download from npm:  
 `npm install ng-file-picker --save`
 2. Import the `NgFilePickerModule` module:    
@@ -10,10 +12,12 @@ Supports (Angular 2+) versions.
  3. Add `NgFilePickerModule` to your module imports:    
 
 ## Usage  
+
 Put the `ng-file-picker` component wherever you need it.  
 
 
 ### Attributes (Input):   
+
 | Name                 | Type                                | Default            | Description                                                                                                                                                                                                                                        |  
 |----------------------|:-----------------------------------:|:------------------:|:-------------------------:|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 | id                 | `String` | `undefined`                       | Uniq identifier of your input filed.                                                                                                                                                                                     |  
@@ -32,7 +36,9 @@ Put the `ng-file-picker` component wherever you need it.
 
 
 ### API:   
-Container component:  
+
+Container component:
+
 ```ts
 import {Component, ViewChild} from '@angular/core';  
 
@@ -51,7 +57,9 @@ export class MyContainerComponent implements OnInit {
   }
 }
 ```
+
 Container Module:
+
 ```ts
 import { NgFilePickerModule } from 'ng-file-picker';
 import { MyContainerComponent } from './my-container.component';
