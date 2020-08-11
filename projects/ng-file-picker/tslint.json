@@ -1,0 +1,18 @@
+{
+  "extends": "../../tslint.json",
+  "rules": {
+    "directive-selector": [
+      true,
+      "attribute",
+      "ngFilePicker",
+      "camelCase"
+    ],
+    "component-selector": [
+      true,
+      "element",
+      "ng-file-picker",
+      "kebab-case",
+      "[requireFile]"
+    ]
+  }
+}
