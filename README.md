@@ -1,27 +1,70 @@
-# FilePickerLibrary
+# Ng File Picker  
+This is a configurable file picker build for Angular applications.  
+Supports (Angular 2+) versions.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.19.
+## Installation:  
+1. Download from npm:  
+`npm install ng-file-picker --save`
+2. Import the `NgFilePickerModule` module:    
+ `import { NgFilePickerModule } from 'ng-file-picker';`
+ 3. Add `NgFilePickerModule` to your module imports:    
 
-## Development server
+## Usage  
+Put the `ng-file-picker` component wherever you need it.  
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+### Attributes (Input):   
+| Name                 | Type                                | Default            | Description                                                                                                                                                                                                                                        |  
+|----------------------|:-----------------------------------:|:------------------:|:-------------------------:|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
+| id                 | `String` | `undefined`                       | Uniq identifier of your input filed.                                                                                                                                                                                     |  
+| name				| `String`	| `undefined`	| Uniq name of your input
+| multiple			| `Boolean`	| `false`		| If true, the file picker allows to upload multiple files	else it alows only one file at a time.
+| disabled		| `Boolean`	| `false`		| Tracks whether the control is disabled
+| formControlName	| `String`	| `undefined`	| Form control name of your field which is specified in the FormGroup.
+| ngModel			| `Variable`	| `undefined`	| Tracks the value bound to this directive.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Methods (Output):
 
-## Build
+   | Name	| Description                                                                                                                                                                                                                                        |  
+|-----------------------|:-----------------------------------:|  
+| change				| Event bound to classical input change event
+| ngModelChange			| Event emitter for producing the `ngModelChange` event after the view model update
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
+### API:   
+Container component:  
+```ts
+import {Component, ViewChild} from '@angular/core';  
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+@Component({  
+selector: 'my-container',  
+template: `  
+<ng-file-picker id="test" name="file" [(ngModel)]="file" (ngModelChange)="getFile($event)" multiple="false"></ng-file-picker>  
+`  
+});
+export class MyContainerComponent implements OnInit {
+  file: any;
 
-## Running end-to-end tests
+  getFile(event: any) {
+    console.log("event", event, this.file);
+    ....
+  }
+}
+```
+Container Module:
+```ts
+import { NgFilePickerModule } from 'ng-file-picker';
+import { MyContainerComponent } from './my-container.component';
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+@NgModule({
+  declarations: [
+    MyContainerComponent
+  ],
+  imports: [
+    ...,
+    NgFilePickerModule
+  ]
+})
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+export class MyContainerModule { }
+```
