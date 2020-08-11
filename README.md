@@ -1,3 +1,4 @@
+
 # Ng File Picker  
 
 This is a configurable file picker build for Angular applications.  
@@ -18,8 +19,8 @@ Put the `ng-file-picker` component wherever you need it.
 
 ### Attributes (Input):   
 
-| Name                 | Type                                | Default            | Description                                                                                                                                                                                                                                        |  
-|----------------------|:-----------------------------------:|:------------------:|:-------------------------:|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
+| Name                 | Type                                | Default            | Description
+|-----------------------|:-----------------------------------:|---------------|-------------
 | id                 | `String` | `undefined`                       | Uniq identifier of your input filed.                                                                                                                                                                                     |  
 | name				| `String`	| `undefined`	| Uniq name of your input
 | multiple			| `Boolean`	| `false`		| If true, the file picker allows to upload multiple files	else it alows only one file at a time.
