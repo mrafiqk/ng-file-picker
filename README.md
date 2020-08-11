@@ -21,8 +21,8 @@ Put the `ng-file-picker` component wherever you need it.
 
 | Name                 | Type                                | Default            | Description
 |-----------------------|:-----------------------------------:|---------------|-------------
-| id                 | `String` | `undefined`                       | Uniq identifier of your input filed.                                                                                                                                                                                     |  
-| name				| `String`	| `undefined`	| Uniq name of your input
+| id                 | `String` | `undefined`                       | Unique identifier of your input filed.                                                                                                                                                                                     |  
+| name				| `String`	| `undefined`	| Unique name of your input
 | multiple			| `Boolean`	| `false`		| If true, the file picker allows to upload multiple files	else it alows only one file at a time.
 | disabled		| `Boolean`	| `false`		| Tracks whether the control is disabled
 | formControlName	| `String`	| `undefined`	| Form control name of your field which is specified in the FormGroup.
