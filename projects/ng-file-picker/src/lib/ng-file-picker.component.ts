@@ -20,7 +20,9 @@ export class NgFilePickerComponent implements OnInit, ControlValueAccessor {
   @Input() public multiple: boolean;
   @Input() public ngModel: string;
   @Input() public disabled: boolean;
+  @Input() public accept: string;
   @Output() ngModelChange: any = new EventEmitter();
+
 
   constructor() {}
 
