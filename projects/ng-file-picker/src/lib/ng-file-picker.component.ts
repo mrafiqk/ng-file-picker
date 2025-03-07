@@ -9,6 +9,7 @@ import {NG_VALUE_ACCESSOR, ControlValueAccessor} from "@angular/forms";
       "(change)" : "onChange($event.target.files)",
       "(blur)": "onTouched()"
   },
+  standalone: false,
   providers: [{
     provide: NG_VALUE_ACCESSOR, useExisting: NgFilePickerComponent, multi: true
   }]

@@ -44,7 +44,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,
@@ -68,18 +67,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "FilePickerLibrary:build"
+            "buildTarget": "FilePickerLibrary:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "FilePickerLibrary:build:production"
+              "buildTarget": "FilePickerLibrary:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "FilePickerLibrary:build"
+            "buildTarget": "FilePickerLibrary:build"
           }
         },
         "test": {
